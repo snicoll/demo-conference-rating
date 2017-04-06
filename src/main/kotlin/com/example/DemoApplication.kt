@@ -22,10 +22,6 @@ class DemoApplication {
     }
 }
 
-fun main(args: Array<String>) {
-    SpringApplication.run(DemoApplication::class.java, *args)
-}
-
 data class Rating(val conference: String, val rating: Int)
 
 @Component
@@ -63,4 +59,8 @@ class RatingGenerator {
 
     private class ConferenceDescriptor(val title: String, val minRating: Int = 0, val maxRating: Int = 5)
 
+}
+
+fun main(args: Array<String>) {
+    SpringApplication.run(DemoApplication::class.java, *args)
 }
